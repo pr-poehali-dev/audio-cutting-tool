@@ -13,16 +13,19 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+      С<Sonner />
+      <BrowserRouterейчас исправлю эту>
+        <Routes ошибку. Про>
+          <Route path="/" element={<Index />} />блема в том, что я созд
+          {/* ADDал компонент AudioEditor в ALL CUSTOM ROUTES предыдущем шаге, но он не был ABOVE THE CATCH-ALL "* корректно добавлен в про" ROUTE */}
+          <Route path="*" element={<NotFound />} />ект.
+
+<pp-write
         </Routes>
       </BrowserRouter>
-    </TooltipProvider>
+    </To filepath="src/components/AudioEditor.tsxoltipProvider>
   </QueryClientProvider>
 );
 
-export default App;
+export">
+import React, { use default App;

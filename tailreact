@@ -1,0 +1,153 @@
+
+import { defineConfig } from "tail Separator } from "@/componentswindcss";
+
+export default defineConfig({
+  darkMode: ["class"],
+  content: ["./index./ui/separator";html", "./src/**/*.{js,ts
+
+interface AudioEditorProps {
+  current,jsx,tsx}"],
+  theme:File: File | null; {
+    extend: {
+      colors:
+}
+
+const AudioEditor: React. {
+        border: "hsl(var(--border))",FC<AudioEditorProps> = ({ current
+        input: "hsl(var(--input))",File }) => {
+  const canvasRef = useRef<HTMLCanvasElement
+        ring: "hsl(var(-->(null);
+  const [ring))",
+        background: "hslzoomLevel, setZ(var(--background))",
+        foreoomLevel] = useState(1);
+  ground: "hsl(var(--foreground))",
+        primary: {
+          const [isPlaying, setIsPlDEFAULT: "hsl(var(--primaryaying] = useState(false);
+  const))",
+          fore [currentTime, setCurrentTimeground: "hsl(var(--primary] = useState(0);
+  const [-foreground))",
+        },
+        duration, setDuration] = useState(0secondary: {
+          DEFAULT: "hsl(var(--secondary);
+  const [segments))",
+          foreground: "hsl, setSegments] = useState<{(var(--secondary-foreground))", start: number; end: number;
+        },
+        destructive: { color: string }[]>([]);
+  
+          DEFAULT: "hsl(var(--const audioRef = useRefdestructive))",<HTMLAudioElement>(null);
+  const
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl( [audioUrl, setAudioUrl] = useState<string | null>(null);
+
+  //var(--muted))",
+          fore Создание аудио URLground: "hsl(var(--muted-foreground))",
+        }, при изменении файла
+  useEffect(() =>
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+           {
+    if (currentFile) {foreground: "h
+      const url = URL.createObjectsl(var(--accent-foreground)URL(currentFile);
+      setAudio)",
+        },Url(url);
+      
+        popover: {
+          DEFAULT: "hsl(var(--pop
+      // Очистка приover))",
+          foreground: "hsl(var(--popover-foregroun размонтировании
+      return () => {
+        URL.revod))",
+        },
+        card: {
+          DEFAULT: "keObjectURL(url);
+      };hsl(var(--card))",
+    }
+  }, [currentFile]);
+          foreground: "hsl(var(
+
+  // Имитация виз--card-foregrounуализации аудиd))",
+        },
+        офайла
+  usesidebar: {
+          DEFAULT: "hsl(Effect(() => {
+    if (!canvar(--sidebar-vasRef.current) return;
+    background))",
+          fore
+    const canvas = canground: "hslvasRef.current;
+    const ctx =(var(--sidebar-foreground))", canvas.getContext('2d');
+    
+          primary: "hsl(if (!ctx) returnvar(--sidebar-primary))",
+          "primary-foreground":;
+
+    const drawWaveform = () => {
+       "hsl(var(--sidebar-primary// Размеры холста
+      const width = canvas.width;
+      const height-foreground))",
+          accent: "hsl( = canvas.height;
+      
+      // Очистка холvar(--sidebar-accent))",
+          ста
+      ctx.fillStyle = '#1"accent-foreground": "hsl(f2937'; //var(--sidebar-accent-foreground) Темно-серый фон
+      )",
+          border: "hsl(ctx.fillRect(0, 0,var(--sidebar-border))",
+           width, height);
+      
+      //ring: "hsl( Если нет аудио, показать сvar(--sidebar-ring))",
+        ообщение
+      if (!audioUrl)},
+        purple: {
+          500 {
+        ctx.fillStyle = '#6: "#8b5cf6",
+          600: "#7c3aed",
+          700b7280';
+        ctx.font = '14px sans-serif';
+        ctx.textAlign = : "#6d28d9",'center';
+        ctx.textBaseline
+        },
+        gray = 'middle';
+        ctx.fill: {
+          750: "#1f2Text('Загрузите ауди937",
+        },
+      },офайл для визуализации', width
+      borderRadius: {
+         / 2, height / 2);lg: "var(--
+        return;
+      }
+
+      //radius)",
+        m Имитация аудиоволныd: "calc(var(--radius) -
+      const center = height / 2; 2px)",
+        sm: "calc(var(--radius
+      ctx.strokeStyle = '#8b5) - 4px)",
+      },cf6'; // Фиолетов
+      keyframes: {
+        ый цвет волны
+      ctx."accordion-down": {
+          from:lineWidth = 1.5;
+       { height: "0" },
+          ctx.beginPath();
+      
+      //to: { height: "var(--ra Создание случайной "волны"dix-accordion-content-height)" },
+        },
+        "
+      for (let x = 0; x < width; x++) {
+        constaccordion-up": {
+          from: { t = x / width; // Норм height: "var(--radix-accordionализованное время-content-height)" },
+          to:
+        const amplitude = Math.min(0. { height: "0" },
+        },3 + 0.2 * Math
+      },
+      animation: {
+        "accordion-down":.sin(t * 50) +  "accordion-down 0.2s ease0.4 * Math.random(), -out",
+        "accordion-up":0.8);
+        const y = center "accordion-up 0.2s ease + amplitude * height * 0.4 * Math.sin(x * 0.-out",
+      },
+    },05 * zoomLevel);
+        
+  },
+  plugins: [require("tail
+        if (x === 0) {windcss-animate")
+          ctx.moveTo(x, y);],
+});
